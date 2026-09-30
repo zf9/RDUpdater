@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D3F7F80D-181E-463E-A2A0-35DDE794D604}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Uniden_R_Series_Tool</RootNamespace>
+    <AssemblyName>Uniden_R_Series_Tool</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <!-- DECOMPILE-FIX: Match the original AnyCPU ILONLY image, without 32BITPREFERRED. -->
+    <Prefer32Bit>false</Prefer32Bit>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Uniden_R_Series_Tool.ico</ApplicationIcon>
+    <StartupObject>Uniden_R_Series_Tool.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Uniden America\Uniden R Series Tool\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Uniden America\Uniden R Series Tool\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BinaryDefine.cs" />
+    <Compile Include="DecompileStringHash.cs" />
+    <Compile Include="BUTTON_TAB.cs" />
+    <Compile Include="CustomControls\CustomScrollbar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ProgressAsync.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExcelDB.cs" />
+    <Compile Include="FWDloadFormat.cs" />
+    <Compile Include="FWFileDloadURL.cs" />
+    <Compile Include="FWFileInfo.cs" />
+    <Compile Include="FWUpdate.cs" />
+    <Compile Include="GPSDataSettingAddMuteMemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPSDataSettingAddMuteMemForm.Designer.cs">
+      <DependentUpon>GPSDataSettingAddMuteMemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GPSDataSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPSDataSettingForm.Designer.cs">
+      <DependentUpon>GPSDataSettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GPSDataSettingSaveFileOptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPSDataSettingSaveFileOptionForm.Designer.cs">
+      <DependentUpon>GPSDataSettingSaveFileOptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Installer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogClass.cs" />
+    <Compile Include="UpdateCatalog.cs" />
+    <Compile Include="MainForm.Updates.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelName.cs" />
+    <Compile Include="MuteMemory.cs" />
+    <Compile Include="MuteMemoryPoint.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgressBarAsync.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RDInfo.cs" />
+    <Compile Include="ReadRDVersionInfo.cs" />
+    <Compile Include="SafetyControl.cs" />
+    <Compile Include="UARTCommUtils.cs" />
+    <Compile Include="UpdateCheckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCheckForm.Designer.cs">
+      <DependentUpon>UpdateCheckForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateForm.Designer.cs">
+      <DependentUpon>UpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserKBlockFilterComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserKBlockFilterEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserKBlockFilterEditor.Designer.cs">
+      <DependentUpon>UserKBlockFilterEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMark.cs" />
+    <Compile Include="UserMarkPoint.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserSettingConfig.cs" />
+    <Compile Include="UserSettingController.cs" />
+    <Compile Include="UserSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserSettingForm.Designer.cs">
+      <DependentUpon>UserSettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserSettingFormat.cs" />
+    <Compile Include="UserSettingMenu.cs" />
+    <Compile Include="UserSettingModel.cs" />
+    <Compile Include="UserSettingR1.cs" />
+    <Compile Include="UserSettingR3.cs" />
+    <Compile Include="UserSettingR4.cs" />
+    <Compile Include="UserSettingR4NZ.cs" />
+    <Compile Include="UserSettingR4W.cs" />
+    <Compile Include="UserSettingR7.cs" />
+    <Compile Include="UserSettingR8.cs" />
+    <Compile Include="UserSettingR8NZ.cs" />
+    <Compile Include="UserSettingR8W.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- DECOMPILE-FIX: Preserve the original resource name outside the project root namespace. -->
+    <EmbeddedResource Include="CustomControls\CustomScrollbar.resources">
+      <LogicalName>CustomControls.CustomScrollbar.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GPSDataSettingAddMuteMemForm.resources" />
+    <EmbeddedResource Include="GPSDataSettingForm.resources" />
+    <EmbeddedResource Include="GPSDataSettingSaveFileOptionForm.resources" />
+    <EmbeddedResource Include="LoadingForm.resources" />
+    <EmbeddedResource Include="MainForm.resources" />
+    <EmbeddedResource Include="Properties\Resources.resources" />
+    <EmbeddedResource Include="UpdateCheckForm.resources" />
+    <EmbeddedResource Include="UpdateForm.resources" />
+    <EmbeddedResource Include="UserKBlockFilterEditor.resources" />
+    <EmbeddedResource Include="UserSettingForm.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
