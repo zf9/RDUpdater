@@ -4,6 +4,8 @@ An unofficial, community-modified build of the **Uniden R Series Tools** (v2.23)
 
 > ⚠️ **Unofficial project.** Not affiliated with, endorsed by, or supported by Uniden. Use at your own risk. See [Disclaimer](#disclaimer).
 
+> 🔺 **Tested on the R4NZ running firmware v135 only.** Other models (including the R8NZ) and firmware versions have not been tested, so behavior may differ. Back up your settings before making changes.
+
 ---
 
 ## What's New
