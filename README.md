@@ -82,6 +82,10 @@ Using a Worker as a middle layer means the app doesn't need to scrape or parse t
 
 ---
 
+🔍 [View the VirusTotal scan](https://www.virustotal.com/gui/file/08bb43dd6ebd8ead67c00453c8762ab241b1f05d2d9553ce95f157dbf657a529)
+
+---
+
 ## Disclaimer
 
 - This project is **unofficial** and is provided **as is**, with no warranty of any kind.
